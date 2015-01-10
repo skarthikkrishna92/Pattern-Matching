@@ -59,8 +59,7 @@ Requires Linux GCC.
 ---
 ###Known Bugs :
 
-1. Program gives inaccurate results when size of any individual text file goes beyond a certain point. The reason for 
-this is as of yet unclear. The file size beyond which this anomaly happens is also yet to be determined.
+1. Program gives inaccurate results when size of any individual text file goes beyond a certain point. The reason for this is that the entire data of a given file is stored in a single string variable. This restricts the amount of data you can store. It would probably make more sense to store the data in a more dynamic fashion that would not cause inconsistencies purely based on size of the data. However, for the purpose of this application, storing data in a string variable is enough to show proof of concept.
 
 2. The input query variable will accept only one word. Therefore the input provided has to be written without 
 white spaces. In case of whitespaces being used, the string query takes in only the first word of the phrase.
